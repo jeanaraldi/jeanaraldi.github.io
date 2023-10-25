@@ -15,8 +15,8 @@ function colocarNaTela(dados){
     document.querySelector(".direcaoVento").innerHTML = "Direção do vento: " + direcaoDoVentoFormatada(dados.wind.deg)
     document.querySelector(".velocidadeVento").innerHTML = "Velocidade do vento: " + Math.floor(dados.wind.speed * 3.6) + "km/h"
     document.querySelector(".sensacaoTermica").innerHTML = "Sensação: " + Math.floor(dados.main.feels_like) + "°C"
-    document.querySelector(".nascerS").innerHTML = "Nascer do sol: " + tranformarData(dados.sys.sunrise)
-    document.querySelector(".porS").innerHTML = "Por do sol: " + tranformarData(dados.sys.sunset)
+    document.querySelector(".nascerS").innerHTML = "Nascer do sol: " + tranformarData(dados.sys.sunrise -10800)
+    document.querySelector(".porS").innerHTML = "Por do sol: " + tranformarData(dados.sys.sunset -10800)
     document.querySelector(".umidade").innerHTML = "Umidade: " + dados.main.humidity + "%"
 
 
